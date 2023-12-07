@@ -45,6 +45,7 @@ body {
 }
 
 .header{
+  position: relative;
   background-color: hsla(var(--hueAscent,180), var(--sat), 20%, 0.075);
   display: flex;
   align-self: center;
