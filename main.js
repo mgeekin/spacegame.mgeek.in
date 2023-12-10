@@ -25,66 +25,7 @@ addEventListener("keyup",(e)=>{
 })
 
 
-$$.init();
+// $$.init();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//move to generatorWebHelper
-function checkClick(e){
-  // console.log("click")
-
-
-
-var SpaceGame=grab("#spacegame")[0]
-var box=SpaceGame.getBoundingClientRect()
-
-var sg={
-      xrange:[box.left,box.right],
-      yrange:[box.top,box.bottom]
-     }
-
-
-var click={
-            X:event.clientX,
-            Y:event.clientY
-          }
-// console.log([sg.xrange[0],click.X,sg.xrange[1]])
-// console.log([sg.yrange[0],click.Y,sg.yrange[1]])
-
-
-
-if (click.X>=sg.xrange[0] & click.X<=sg.xrange[1]){
-  
-    // console.log("insideX")
-  if(click.Y>=sg.yrange[0] & click.Y<=sg.yrange[1]){
-    // console.log("insideY")
-    
-    
-    xCase=(Math.ceil(((click.X-sg.xrange[0])*3)/(sg.xrange[1]-sg.xrange[0])))
-    yCase=(Math.ceil(((click.Y-sg.yrange[0])*3)/(sg.yrange[1]-sg.yrange[0])))
-    
-    gameMotion=[xCase,yCase]
-    console.log(gameMotion)//use this to move according
-    
-  }
-}
-
-} 
-
-var SpaceGame=grab("#spacegame")[0]
-SpaceGame.addEventListener("mousedown",checkClick)
+load("./spacegame.js")
